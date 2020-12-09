@@ -2,7 +2,7 @@ class Hedging(QCAlgorithm):
 
     def Initialize(self):
         self.SetStartDate(2020, 3, 23)  # Set Start Date 23
-        self.SetEndDate(2020, 4, 23)#17
+        self.SetEndDate(2020, 4, 17) #17
         self.SetCash(1000000)  # Set Strategy Cash
         spy = self.AddEquity("SPY", Resolution.Minute)
         spy.SetDataNormalizationMode(DataNormalizationMode.Raw)
@@ -45,3 +45,5 @@ class Hedging(QCAlgorithm):
             return None
         self.AddOptionContract(puts[0], Resolution.Minute)
         return puts[0]
+# During the period of March 23rd to April 17th, while the market was up about 28%, our portfolio made 25% profit
+# During the period of March 1st to April 1st, while the market lost a substantial percentage, our portfolio made about 5% profit.

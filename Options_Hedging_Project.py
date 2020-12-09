@@ -39,7 +39,7 @@ class Hedging(QCAlgorithm):
             self.log(OTM)
             self.log(self.otm_put)
            
-           
+           # wassup
     def OnData(self,slice):
         optionchain = slice.OptionChains
         for i in slice.OptionChains:
